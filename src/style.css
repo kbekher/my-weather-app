@@ -162,9 +162,6 @@ a:hover {
   color: rgba(255, 255, 255, 0.7);
   width: 280px;
 }
-/*.description::first-letter {
-  text-transform: capitalize;
-}*/
 
 .properties {
   display: flex;
