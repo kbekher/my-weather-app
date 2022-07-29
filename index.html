@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/7d1855c1a8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Belgrano&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="weather-section">
+          <div class="half-section">
+            <div class="search-box">
+              <form class="row align-items-center" id="search-form">
+                <div class="col-sm-11">
+                  <img
+                    src="img/akar-icons_search.svg"
+                    alt="search-icon"
+                    class="search-icon"
+                  />
+                  <input
+                    type="text"
+                    class="search-input"
+                    id="search-input"
+                    placeholder="Change the city..."
+                    autofocus="off"
+                    autocomlete="off"
+                  />
+                </div>
+
+                <div class="col-sm-1">
+                  <i
+                    class="fa-solid fa-location-crosshairs fa-lg fa-bounce"
+                    style="--fa-primary-opacity: 0.5"
+                    id="current-location-icon"
+                  ></i>
+                </div>
+              </form>
+            </div>
+            <div class="today-weather">
+              <div class="main-info">
+                <img
+                  src="img/akar-icons_location.svg"
+                  alt="location-icon"
+                  class="location-icon"
+                />
+                <h1 class="city" id="city"></h1>
+                <p class="today-date" id="today-date"></p>
+                <div class="temperature-section">
+                  <div class="temperature" id="temperature"></div>
+                  <div class="scales">
+                    <div class="scale" id="celsius-scale">
+                      <a href="#" id="celsius">C</a>
+                    </div>
+                    <div class="scale turned-off" id="fahrenheit-scale">
+                      <a href="#" id="fahrenheit">F</a>
+                    </div>
+                  </div>
+                  <div class="description" id="description"></div>
+                </div>
+                <div class="image-section">
+                  <img
+                    src="img/clouds.png"
+                    alt="weather-image"
+                    class="weather-image"
+                  />
+                </div>
+              </div>
+              <div class="properties">
+                <div class="wind box">
+                  <span class="property">Wind</span>
+                  <div class="property-value" id="wind"></div>
+                  <div class="image-section">
+                    <img src="img/Wind.png" alt="wind-icon" />
+                  </div>
+                </div>
+                <div class="humidity box">
+                  <span class="property">Humidity</span>
+                  <div class="property-value" id="humidity"></div>
+                  <div class="image-section">
+                    <img src="img/Humidity.png" alt="humidity-icon" />
+                  </div>
+                </div>
+                <div class="precipitation box">
+                  <span class="property">Precipitation</span>
+                  <div class="property-value" id="precipitation">0%</div>
+                  <div class="image-section">
+                    <img src="img/Precipitation.png" alt="precipitation-icon" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="forecast">
+            <div class="week-day">
+              <span class="day">Monday</span>
+              <span class="date"> 15/07</span>
+              <div class="temp">21°C</div>
+              <div class="image-section">
+                <img
+                  src="img/cloudy.png"
+                  alt="weather-icon"
+                  class="weather-image"
+                />
+              </div>
+            </div>
+            <div class="week-day">
+              <span class="day">Tuesday</span>
+              <span class="date">16/07</span>
+              <div class="temp">21°C</div>
+              <div class="image-section">
+                <img
+                  src="img/cloudy.png"
+                  alt="weather-icon"
+                  class="weather-image"
+                />
+              </div>
+            </div>
+            <div class="week-day">
+              <span class="day">Wednesday</span>
+              <span class="date">17/07</span>
+              <div class="temp">21°</div>
+              <div class="image-section">
+                <img
+                  src="img/storm.png"
+                  alt="weather-icon"
+                  class="weather-image"
+                />
+              </div>
+            </div>
+            <div class="week-day">
+              <span class="day">Thursday</span>
+              <span class="date">18/07</span>
+              <div class="temp">21°</div>
+              <div class="image-section">
+                <img
+                  src="img/rain.png"
+                  alt="weather-icon"
+                  class="weather-image"
+                />
+              </div>
+            </div>
+            <div class="week-day">
+              <span class="day">Friday</span>
+              <span class="date">19/07</span>
+              <div class="temp">21°</div>
+              <div class="image-section">
+                <img
+                  src="img/windy.png"
+                  alt="weather-icon"
+                  class="weather-image"
+                />
+              </div>
+            </div>
+            <div class="week-day">
+              <span class="day">Saturday</span>
+              <span class="date">20/07</span>
+              <div class="temp">21°</div>
+              <div class="image-section">
+                <img
+                  src="img/sunny.png"
+                  alt="weather-icon"
+                  class="weather-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
