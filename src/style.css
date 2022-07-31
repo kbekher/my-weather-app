@@ -243,3 +243,12 @@ a:hover {
   position: relative;
   top: 14px;
 }
+.coded-by {
+  display: block;
+  margin: 0 auto;
+  margin-right: 60px;
+  text-align: right;
+}
+.github-link {
+  font-size: 16px;
+}
