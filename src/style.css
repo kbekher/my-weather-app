@@ -206,6 +206,9 @@ a:hover {
   background-color: rgba(217, 217, 217, 0.07);
   border-radius: 8px;
   padding: 16px 16px 24px 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .box::before {
   content: "";
@@ -224,8 +227,6 @@ a:hover {
 }
 .properties img {
   width: 100px;
-  position: relative;
-  top: -30px;
 }
 .properties .property {
   font-weight: 400;
