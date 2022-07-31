@@ -54,6 +54,7 @@ body {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  flex-wrap: wrap;
   gap: 8px;
 }
 .half-section {
@@ -244,10 +245,8 @@ a:hover {
   top: 14px;
 }
 .coded-by {
-  display: block;
-  margin: 0 auto;
-  margin-right: 60px;
   text-align: right;
+  width: 1180px;
 }
 .github-link {
   font-size: 16px;
