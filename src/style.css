@@ -8,7 +8,8 @@ body {
 .container {
   max-width: 1640px;
   width: 90%;
-  margin: 60px;
+  margin: 0 auto;
+  margin-top: 60px;
   padding: 0;
 }
 .image-section {
