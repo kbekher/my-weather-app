@@ -101,6 +101,11 @@ body {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
+.main-info .text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
 .main-info .weather-image {
   width: 331px;
@@ -130,8 +135,6 @@ p.today-date {
   color: rgba(255, 255, 255, 0.7);
 }
 .temperature-section {
-  position: relative;
-  top: 90px;
   width: 350px;
   display: flex;
   flex-flow: row wrap;
