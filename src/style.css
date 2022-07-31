@@ -16,18 +16,26 @@ body {
   text-align: right;
 }
 .search-box {
+  position: relative;
   margin-bottom: 8px;
   padding: 16px 32px;
   max-width: 776px;
   max-height: 56px;
-  border-radius: 8px 8px 8px 8px;
-  border: 1px solid;
-  border-image: linear-gradient(
+}
+.search-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  padding: 1px;
+  background: linear-gradient(
     45deg,
     rgba(255, 255, 255, 0.38),
     rgba(255, 255, 255, 0)
   );
-  border-image-slice: 9;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
 }
 
 .search-input {
