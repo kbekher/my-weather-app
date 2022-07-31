@@ -148,7 +148,7 @@ p.today-date {
   width: 130px;
   height: 91px;
 }
-.temperature-section .scales {
+.scales {
   width: 156px;
   height: 91px;
   border-radius: 8px;
@@ -158,14 +158,14 @@ p.today-date {
   justify-content: space-between;
   align-content: center;
 }
-a {
+.scale-link {
   color: rgba(255, 255, 255, 0.3);
   text-decoration: none;
   font-weight: 400;
   font-size: 80px;
   line-height: 90px;
 }
-a:hover {
+.scale-link:hover {
   color: rgba(255, 255, 255, 0.3);
   cursor: unset;
 }
@@ -178,11 +178,11 @@ a:hover {
   background: rgba(255, 255, 255, 0.3);
   border-radius: 8px;
 }
-.turned-off a {
+.turned-off .scale-link {
   font-weight: 500;
   color: #fffffe;
 }
-.turned-off a:hover {
+.turned-off .scale-link:hover {
   cursor: pointer;
 }
 .description {
@@ -295,5 +295,9 @@ a:hover {
   width: 1180px;
 }
 .github-link {
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  font-weight: 400;
   font-size: 16px;
+  line-height: 50px;
 }
