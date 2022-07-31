@@ -301,3 +301,6 @@ p.today-date {
   font-size: 16px;
   line-height: 50px;
 }
+.github-link:hover {
+  color: rgba(13, 16, 34, 1);
+}
