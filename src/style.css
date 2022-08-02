@@ -299,6 +299,11 @@ p.today-date {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .coded-by {
+    text-align: center;
+  }
+}
 @media (max-width: 768px) {
   .half-section {
     width: 660px;
@@ -323,5 +328,8 @@ p.today-date {
   .properties img {
     width: 88px;
     margin-top: 10px;
+  }
+  .coded-by {
+    text-align: center;
   }
 }
