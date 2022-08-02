@@ -19,7 +19,6 @@ body {
   position: relative;
   margin-bottom: 8px;
   padding: 16px 32px;
-  max-width: 776px;
   max-height: 56px;
 }
 .search-box::before {
@@ -297,4 +296,32 @@ p.today-date {
 }
 .github-link:hover {
   color: rgb(45, 51, 87);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .half-section {
+    width: 660px;
+  }
+  .today-weather {
+    min-width: 660px;
+  }
+  .temperature-section {
+    width: 310px;
+  }
+  .main-info .weather-image {
+    width: 301px;
+    height: 200px;
+    margin-top: 24px;
+  }
+  .properties .box {
+    max-width: 220px;
+  }
+  .properties .property-value {
+    font-size: 18px;
+  }
+  .properties img {
+    width: 88px;
+    margin-top: 10px;
+  }
 }
