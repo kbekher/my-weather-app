@@ -6,20 +6,17 @@ body {
 }
 
 .container {
-  max-width: 1640px;
-  width: 90%;
   margin: 0 auto;
   margin-top: 60px;
   padding: 0;
-}
-.image-section {
-  text-align: right;
+  max-width: 1640px;
+  width: 90%;
 }
 .search-box {
   position: relative;
+  max-height: 56px;
   margin-bottom: 8px;
   padding: 16px 32px;
-  max-height: 56px;
 }
 .search-box::before {
   content: "";
@@ -42,13 +39,12 @@ body {
   border: none;
   background-color: transparent;
   color: rgba(255, 255, 255, 0.7);
-  outline: none;
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   line-height: 20px;
-  color: rgba(255, 255, 255, 0.7);
   margin-left: 30px;
-  width: 86%; /*fix*/
+  outline: none;
+  width: 90%;
 }
 .search-icon {
   width: 19px;
@@ -58,28 +54,29 @@ body {
 }
 
 .weather-section {
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
   flex-wrap: wrap;
   gap: 8px;
+}
+.image-section {
+  text-align: right;
 }
 .half-section {
   width: 776px;
 }
 .today-weather {
-  min-width: 776px;
-  width: 100%;
-  margin: 0 auto;
   height: 550px;
+  margin: 0 auto;
   flex-direction: column;
 }
 .main-info {
   position: relative;
-  height: 361px;
   background-color: rgba(217, 217, 217, 0.07);
   border-radius: 8px;
+  height: 361px;
   padding: 32px;
   display: flex;
   flex-direction: row;
@@ -108,40 +105,37 @@ body {
 }
 
 .main-info .weather-image {
-  width: 331px;
-  height: 220px;
   margin-top: 30px;
+  height: 220px;
+  width: 331px;
 }
-h1 {
-  display: inline;
-  font-style: normal;
-  font-weight: 400;
+.city {
   font-size: 32px;
+  font-weight: 400;
   line-height: 41px;
 }
-p.today-date {
-  margin-top: 8px;
-  font-style: normal;
+.today-date {
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
   font-size: 18px;
   line-height: 23px;
-  color: rgba(255, 255, 255, 0.7);
+  margin-top: 8px;
 }
 .temperature-section {
-  width: 350px;
   display: flex;
   flex-flow: row wrap;
   align-content: center;
   gap: 4px;
+  width: 350px;
 }
 .temperature-section .temperature {
   font-weight: 500;
   font-size: 80px;
   line-height: 102px;
-  width: 130px;
   height: 91px;
+  /* width: 130px; scale switcher jumps depending on temp number */
 }
-.scales {
+.scale-switcher {
   width: 156px;
   height: 91px;
   border-radius: 8px;
@@ -151,20 +145,20 @@ p.today-date {
   justify-content: space-between;
   align-content: center;
 }
+.scale {
+  text-align: center;
+  width: 77px;
+}
 .scale-link {
   color: rgba(255, 255, 255, 0.3);
-  text-decoration: none;
-  font-weight: 400;
   font-size: 80px;
+  font-weight: 400;
   line-height: 90px;
+  text-decoration: none;
 }
 .scale-link:hover {
   color: rgba(255, 255, 255, 0.3);
   cursor: unset;
-}
-.scale {
-  text-align: center;
-  width: 77px;
 }
 
 .turned-off {
@@ -172,41 +166,41 @@ p.today-date {
   border-radius: 8px;
 }
 .turned-off .scale-link {
-  font-weight: 500;
   color: #fffffe;
+  font-weight: 500;
 }
 .turned-off .scale-link:hover {
   cursor: pointer;
 }
+
 .description {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 23px;
   color: rgba(255, 255, 255, 0.7);
-  width: 280px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+  width: 290px;
 }
 
 .properties {
+  margin: 0 auto;
+  margin-top: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 8px;
   gap: 8px;
 }
 .properties .box {
   position: relative;
-  width: 99%;
-  height: 181px;
   background-color: rgba(217, 217, 217, 0.07);
   border-radius: 8px;
+  height: 181px;
+  width: 100%;
   padding: 16px 16px 24px 24px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.box::before {
+.properties .box::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -224,29 +218,29 @@ p.today-date {
 .properties img {
   width: 100px;
 }
-.properties .property {
-  font-weight: 400;
+.property {
   font-size: 16px;
+  font-weight: 400;
   line-height: 20px;
 }
-.properties .property-value {
-  font-weight: 500;
+.property-value {
   font-size: 24px;
+  font-weight: 500;
   line-height: 31px;
   position: relative;
   top: 90px;
 }
 
 .forecast {
+  margin-top: 64.6px;
+  width: 396px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  width: 396px;
-  margin-top: 64.6px;
   gap: 8px;
 }
-.forecast .week-day {
+.week-day {
   width: 396px;
   height: 85px;
   background-color: rgba(217, 217, 217, 0.07);
@@ -262,23 +256,23 @@ p.today-date {
 }
 
 .forecast .day {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 23px;
   color: rgba(255, 255, 255, 0.7);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
   position: relative;
   top: 10px;
 }
 .forecast .date {
-  font-weight: 400;
   font-size: 18px;
+  font-weight: 400;
   line-height: 23px;
   position: relative;
   top: 10px;
 }
 .forecast .temp {
-  font-weight: 700;
   font-size: 16px;
+  font-weight: 700;
   line-height: 20px;
   position: relative;
   top: 14px;
@@ -289,10 +283,10 @@ p.today-date {
 }
 .github-link {
   color: rgba(255, 255, 255, 0.3);
-  text-decoration: none;
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   line-height: 50px;
+  text-decoration: none;
 }
 .github-link:hover {
   color: rgb(45, 51, 87);
