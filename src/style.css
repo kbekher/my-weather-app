@@ -133,7 +133,7 @@ body {
   font-size: 80px;
   line-height: 102px;
   height: 91px;
-  /* width: 130px; scale switcher jumps depending on temp number */
+  min-width: 130px;
 }
 .scale-switcher {
   width: 156px;
