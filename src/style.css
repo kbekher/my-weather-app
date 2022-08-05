@@ -114,7 +114,7 @@ body {
   font-weight: 400;
   line-height: 41px;
 }
-.today-date {
+.current-date {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
   font-size: 18px;
@@ -215,8 +215,15 @@ body {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
+
+.properties .text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .properties img {
-  width: 100px;
+  width: 96px;
 }
 .property {
   font-size: 16px;
@@ -227,8 +234,6 @@ body {
   font-size: 24px;
   font-weight: 500;
   line-height: 31px;
-  position: relative;
-  top: 90px;
 }
 
 .forecast {

@@ -19,10 +19,15 @@ function showWeather(response) {
   )}°`;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
-  document.querySelector("#wind").innerHTML = `${response.data.wind.speed}km/h`;
+  document.querySelector(
+    "#wind"
+  ).innerHTML = `${response.data.wind.speed} km/h`;
   document.querySelector(
     "#humidity"
   ).innerHTML = `${response.data.main.humidity}%`;
+  document.querySelector(
+    "#pressure"
+  ).innerHTML = `${response.data.main.pressure} hPa`;
 
   document.querySelector("#celsius-scale").classList.remove("turned-off");
   document.querySelector("#fahrenheit-scale").classList.add("turned-off");
@@ -84,7 +89,7 @@ function showPosition(position) {
 }
 
 let date = new Date();
-let currentDate = document.querySelector("#today-date");
+let currentDate = document.querySelector("#current-date");
 currentDate.innerHTML = displayDate(date);
 
 let celsiusLink = document.querySelector("#celsius");
