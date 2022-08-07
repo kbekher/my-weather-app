@@ -12,13 +12,18 @@ function getSubmitCity(event) {
 }
 
 function showWeather(response) {
-  console.log(response.data);
+  console.log(response.data); //delete this
+  let weatherIcon = document.querySelector("#weather-image");
   document.querySelector("#city").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = `${Math.round(
     response.data.main.temp
   )}°`;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+
+  weatherIcon.setAttribute("src", `img/${response.data.weather[0].icon}.png`);
+  weatherIcon.setAttribute("alt", `${response.data.weather[0].description}`);
+
   document.querySelector(
     "#wind"
   ).innerHTML = `${response.data.wind.speed} km/h`;

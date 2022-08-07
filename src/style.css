@@ -103,11 +103,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-
-.main-info .weather-image {
-  margin-top: 30px;
-  height: 220px;
-  width: 331px;
+.main-info .image-section {
+  min-width: 350px;
+  padding-top: 40px;
+  text-align: center;
 }
 .city {
   font-size: 32px;
