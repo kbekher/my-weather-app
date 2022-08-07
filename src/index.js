@@ -5,10 +5,10 @@ function search(city) {
   axios.get(apiUrl).then(showWeather);
 }
 
-function getSubmitCity(event) {
+function getSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector("#search-input").value;
-  search(city);
+  let searchInput = document.querySelector("#search-input");
+  search(searchInput.value);
 }
 
 function showWeather(response) {
@@ -103,7 +103,7 @@ celsiusLink.addEventListener("click", toCelsius);
 fahrenheitLink.addEventListener("click", toFahrenheit);
 
 let form = document.querySelector("#search-form");
-form.addEventListener("submit", getSubmitCity);
+form.addEventListener("submit", getSubmit);
 
 let currentLocationIcon = document.querySelector("#current-location-icon");
 currentLocationIcon.addEventListener("click", showCurrentPosition);
