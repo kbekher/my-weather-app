@@ -312,11 +312,6 @@ body {
   .temperature-section {
     width: 310px;
   }
-  .main-info .weather-image {
-    width: 301px;
-    height: 200px;
-    margin-top: 24px;
-  }
   .properties .box {
     max-width: 220px;
   }
