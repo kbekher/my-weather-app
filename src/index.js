@@ -43,6 +43,8 @@ function displayWeather(response) {
 
   document.querySelector("#celsius-scale").classList.remove("turned-off");
   document.querySelector("#fahrenheit-scale").classList.add("turned-off");
+
+  document.querySelector("#search-input").value = "";
 }
 
 function displayDate(date) {
