@@ -13,6 +13,11 @@ function getSubmit(event) {
 
 function displayWeather(response) {
   console.log(response.data); //delete this
+
+  let date = new Date();
+  let currentDate = document.querySelector("#current-date");
+  currentDate.innerHTML = displayDate(date);
+
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temperature");
   let descriptionElement = document.querySelector("#description");
@@ -95,10 +100,6 @@ function convertToCelsius(event) {
   document.querySelector("#celsius-scale").classList.remove("turned-off");
   document.querySelector("#fahrenheit-scale").classList.add("turned-off");
 }
-
-let date = new Date();
-let currentDate = document.querySelector("#current-date");
-currentDate.innerHTML = displayDate(date);
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", getSubmit);
