@@ -12,8 +12,6 @@ function getSubmit(event) {
 }
 
 function displayWeather(response) {
-  console.log(response.data); //delete this
-
   let date = new Date();
   let currentDate = document.querySelector("#current-date");
   currentDate.innerHTML = displayDate(date);
