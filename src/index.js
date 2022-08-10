@@ -45,6 +45,44 @@ function displayWeather(response) {
   document.querySelector("#fahrenheit-scale").classList.add("turned-off");
 
   document.querySelector("#search-input").value = "";
+
+  displayForecast();
+}
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let forecastHTML = `<div class="forecast-wrap">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+          <div class="week-day">
+            <div class="text-section">
+              <span class="day">${day}</span>
+              <span class="date"> 15/07</span>
+              <div class="temp">21°C</div>
+            </div>
+            <div class="image-section">
+              <img
+                src="img/rainy.png"
+                alt="weather-icon"
+                class="weather-image"
+              />
+            </div>
+          </div>
+      `;
+  });
+  forecastHTML = forecastHTML + ` </div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function displayDate(date) {
