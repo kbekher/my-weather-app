@@ -34,6 +34,7 @@ function displayDate(date) {
 }
 
 function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   let days = [
     "Monday",
@@ -57,7 +58,7 @@ function displayForecast(response) {
             </div>
             <div class="image-section">
               <img
-                src="img/rainy.png"
+                src="img/f02d.png"
                 alt="weather-icon"
                 class="weather-image"
               />
