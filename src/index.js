@@ -124,7 +124,7 @@ function displayWeather(response) {
 
   cityElement.innerHTML = response.data.name;
   temperatureElement.innerHTML = `${Math.round(response.data.main.temp)}°`;
-  descriptionElement.innerHTML = response.data.weather[0].main;
+  descriptionElement.innerHTML = response.data.weather[0].description;
 
   weatherIcon.setAttribute("src", `img/${response.data.weather[0].icon}.png`);
   weatherIcon.setAttribute("alt", `${response.data.weather[0].description}`);

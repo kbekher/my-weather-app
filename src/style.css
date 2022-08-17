@@ -180,6 +180,9 @@ body {
   width: 290px;
 }
 
+.description::first-letter {
+  text-transform: uppercase;
+}
 .properties {
   margin: 0 auto;
   margin-top: 8px;
