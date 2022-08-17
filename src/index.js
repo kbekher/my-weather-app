@@ -129,7 +129,7 @@ function displayWeather(response) {
   weatherIcon.setAttribute("src", `img/${response.data.weather[0].icon}.png`);
   weatherIcon.setAttribute("alt", `${response.data.weather[0].description}`);
 
-  windElement.innerHTML = `${response.data.wind.speed} km/h`;
+  windElement.innerHTML = `${response.data.wind.speed} m/h`;
   humidityElement.innerHTML = `${response.data.main.humidity}%`;
   pressureElement.innerHTML = `${response.data.main.pressure} hPa`;
 
