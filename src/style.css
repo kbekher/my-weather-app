@@ -42,7 +42,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
-  margin-left: 30px;
+  padding-left: 20px;
   outline: none;
   width: 90%;
 }
@@ -104,7 +104,7 @@ body {
   justify-content: space-between;
 }
 .main-info .image-section {
-  min-width: 350px;
+  width: 350px;
   padding-top: 40px;
   text-align: center;
 }
@@ -130,7 +130,7 @@ body {
 .temperature-section .temperature {
   font-weight: 500;
   font-size: 80px;
-  line-height: 102px;
+  line-height: 94px;
   height: 91px;
   min-width: 130px;
 }
@@ -301,7 +301,6 @@ body {
   color: rgb(45, 51, 87);
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .coded-by {
     text-align: center;
@@ -309,22 +308,53 @@ body {
 }
 @media (max-width: 768px) {
   .half-section {
-    width: 660px;
+    min-width: 540px;
   }
-  .today-weather {
-    min-width: 660px;
+  .main-info {
+    height: 350px;
+  }
+  .main-info .text-section {
+    max-width: 250px;
+  }
+  .city {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .current-date,
+  .description {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .image-section img {
+    max-width: 100%;
+    height: auto;
   }
   .temperature-section {
-    width: 310px;
+    max-width: 270px;
+  }
+  .temperature-section .temperature {
+    font-size: 60px;
+    line-height: 80px;
+    min-width: 100px;
+  }
+  .scale-switcher {
+    width: 112px;
+    height: 78px;
+  }
+  .scale-link {
+    font-size: 68px;
+    line-height: 82px;
   }
   .properties .box {
     max-width: 220px;
+    height: 160px;
+    padding: 12px 12px 18px 18px;
   }
   .properties .property-value {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 16px;
   }
   .properties img {
-    width: 88px;
     margin-top: 10px;
   }
   .coded-by {
