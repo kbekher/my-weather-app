@@ -363,11 +363,13 @@ body {
 }
 
 @media (max-width: 576px) {
-  .container {
+  .container,
+  .forecast {
     margin-top: 40px;
   }
   .half-section {
     min-width: 346px;
+    height: 410px;
   }
   .search-box {
     padding: 9px 20px;
@@ -378,6 +380,9 @@ body {
   .search-input {
     font-size: 14px;
     padding-left: 9px;
+  }
+  .today-weather {
+    height: 360px;
   }
   .main-info {
     height: 264px;
@@ -414,12 +419,24 @@ body {
   .current-date,
   .description,
   .property,
-  .property-value {
+  .property-value,
+  .forecast .day,
+  .forecast .date {
     font-size: 14px;
     line-height: 16px;
   }
   .properties .box {
     height: 86px;
     padding: 8px 12px;
+  }
+  .forecast,
+  .week-day {
+    max-width: 346px;
+  }
+  .week-day {
+    padding: 6px 20px;
+  }
+  .forecast .temp {
+    font-size: 14px;
   }
 }
