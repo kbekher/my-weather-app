@@ -419,9 +419,7 @@ body {
   .current-date,
   .description,
   .property,
-  .property-value,
-  .forecast .day,
-  .forecast .date {
+  .property-value {
     font-size: 14px;
     line-height: 16px;
   }
@@ -436,7 +434,8 @@ body {
   .week-day {
     padding: 6px 20px;
   }
-  .forecast .temp {
-    font-size: 14px;
+
+  .coded-by {
+    margin-bottom: 20px;
   }
 }
