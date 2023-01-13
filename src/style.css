@@ -301,7 +301,7 @@ body {
   color: rgb(45, 51, 87);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .coded-by {
     text-align: center;
   }
@@ -359,5 +359,67 @@ body {
   }
   .coded-by {
     text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    margin-top: 40px;
+  }
+  .half-section {
+    min-width: 346px;
+  }
+  .search-box {
+    padding: 9px 20px;
+  }
+  .search-icon {
+    width: 12px;
+  }
+  .search-input {
+    font-size: 14px;
+    padding-left: 9px;
+  }
+  .main-info {
+    height: 264px;
+    padding: 22px;
+  }
+  .main-info .text-section {
+    max-width: 164px;
+  }
+
+  .main-info .image-section {
+    max-width: 228px;
+  }
+  .temperature-section {
+    max-width: 184px;
+  }
+
+  .temperature-section .temperature {
+    font-size: 42px;
+    line-height: 60px;
+    min-width: 68px;
+    height: 56px;
+  }
+  .scale-switcher {
+    width: 94px;
+    height: 54px;
+  }
+  .scale-link {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  .city {
+    line-height: 30px;
+  }
+  .current-date,
+  .description,
+  .property,
+  .property-value {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .properties .box {
+    height: 86px;
+    padding: 8px 12px;
   }
 }
