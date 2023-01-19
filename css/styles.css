@@ -1,10 +1,5 @@
 body {
-  background: url(../img/Bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
+  background: url(../img/Bg.jpg) center center/cover no-repeat;
   font-family: "Belgrano", serif;
   font-family: "Space Grotesk", sans-serif;
   color: white;
